@@ -8,6 +8,19 @@ const backgroundColour = 'white'; // Uses https://www.w3schools.com/tags/canvas_
 const chartJSNodeCanvas = new ChartJSNodeCanvas({ width, height, backgroundColour});
 
 (async () => {
+  /*
+    const configuration = {
+      type: 'line',
+      data: {
+        labels: ['Q1', 'Q2', 'Q3', 'Q4'],
+        datasets: [{
+          label: 'Users',
+          data: [50, 60, 70, 180]
+        }]
+      }
+    };
+
+  */
     const configuration = {
       type: 'line',
       data: {
@@ -69,7 +82,8 @@ const chartJSNodeCanvas = new ChartJSNodeCanvas({ width, height, backgroundColou
           }
         }
       }
-    };
+    }
+    
     const imageBuffer = await chartJSNodeCanvas.renderToBuffer(configuration);
     // Write image to file
     fs.writeFileSync('./mychart.png', imageBuffer);
@@ -90,30 +104,3 @@ const chartJSNodeCanvas = new ChartJSNodeCanvas({ width, height, backgroundColou
 
 })();
 
-
-/*
-const fs = require('fs');
-const { CanvasRenderService } = require('chartjs-node-canvas');
-
-const width = 400; //px
-const height = 400; //px
-const canvasRenderService = new CanvasRenderService(width, height);
-
-(async () => {
-    const configuration = {
-      type: 'bar',
-      data: {
-        labels: ['Q1', 'Q2', 'Q3', 'Q4'],
-        datasets: [{
-          label: 'Users',
-          data: [50, 60, 70, 180]
-        }]
-      }
-    };
-
-    const imageBuffer = await canvasRenderService.renderToBuffer(configuration);
-
-    // Write image to file
-    fs.writeFileSync('/tmp/mychart.png', imageBuffer);
-})();
-*/
