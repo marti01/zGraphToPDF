@@ -1,0 +1,16 @@
+{
+  "name": "zgraphtopdf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "chart.js": "^3.6.0",
+    "chartjs-node-canvas": "^4.1.4",
+    "pdfkit": "^0.8.3"
+  },
+  "author": "",
+  "license": "ISC"
+}
