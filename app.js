@@ -98,6 +98,8 @@ const chartJSNodeCanvas = new ChartJSNodeCanvas({ width, height, backgroundColou
       layout: 'portrait'
     });
     doc.image(`./mychart.png`, 100, 70, {fit: [300,300]});
+    doc.image(`C:/Users/m.pinto/temp/parcela1637225239758_ndvi_25831.jpeg`, 100, 370, {fit: [300,300]});
+    doc.image(`C:/Users/m.pinto/temp/parcela1637225220470_ndvi_25831.jpeg`, 100, 370, {fit: [300,300]});
     doc.end();
 
 
